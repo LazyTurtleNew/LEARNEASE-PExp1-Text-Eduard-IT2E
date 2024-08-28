@@ -1,0 +1,473 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LearnEase -</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      /* General body styles */
+      body {
+        font-family: "Poppins", sans-serif;
+        line-height: 1.6;
+        background: #135d66;
+        color: #fff;
+      }
+
+      /* Header and navigation styles */
+      header {
+        background: #003c43;
+        padding: 1rem 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+        color: #130707;
+      }
+
+      .nav-links {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+      }
+
+      .nav-links li {
+        margin: 0 1rem;
+      }
+
+      .nav-links a {
+        color: #a00d0d;
+        text-decoration: none;
+        padding: 0.5rem 1rem;
+        transition: background 0.3s ease;
+      }
+
+      .nav-links a {
+        color: #ffffff;
+      }
+      .nav-links a:hover {
+        background: #ff4971;
+        border-radius: 5px;
+      }
+
+      .cta-button {
+        background: transparent;
+        border: solid white 1px;
+        color: #fff;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background 0.3s ease;
+      }
+
+      .cta-button2 {
+        background: transparent;
+        border: solid white 1px;
+        color: #fff;
+        font-size: 10px;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: background 0.3s ease;
+      }
+
+      .cta-button:hover {
+        background: #fff;
+        color: black;
+        text-decoration: none;
+      }
+
+      .cta-button2:hover {
+        background: #fff;
+        color: black;
+        text-decoration: none;
+      }
+
+      main {
+        text-align: center;
+        padding: 4rem 1rem;
+        max-width: 1200px;
+        margin: 0 auto;
+      }
+
+      .hero {
+        background: #6d9c97;
+        padding: 3rem 1rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+        margin-bottom: 1rem;
+      }
+
+      .hero p {
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+      }
+
+      .hero .cta-button {
+        font-size: 1rem;
+        padding: 1rem 2rem;
+      }
+
+      .hero .cta-button2 {
+        font-size: 14px;
+        padding: 0.9rem 1.5rem;
+      }
+
+      .stats {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 2rem;
+      }
+
+      .stat {
+        flex: 1;
+        min-width: 150px;
+        margin: 1rem;
+        padding: 1rem;
+        background: #77b0aa;
+        border-radius: 10px;
+        text-align: center;
+      }
+
+      .stat h2 {
+        font-size: 1.5rem;
+        color: #135d66;
+        margin-bottom: 0.5rem;
+      }
+
+      .stat p {
+        font-size: 1rem;
+      }
+
+      .navbar-nav {
+        display: flex;
+        justify-content: center;
+        flex: 1;
+      }
+
+      .pink {
+        color: #77b0aa;
+      }
+
+      footer {
+        background: #003c43;
+        color: #fff;
+        padding: 2rem 0;
+        text-align: center;
+      }
+
+      footer a {
+        color: #fff;
+        text-decoration: none;
+      }
+
+      footer a:hover {
+        text-decoration: underline;
+      }
+
+      .social-media a {
+        margin: 0 0.5rem;
+      }
+
+      .social-media i {
+        font-size: 1.5rem;
+      }
+      /* Chatbox border styles */
+      .chatbox-border {
+        border: 4px solid #ffffff; /* White border with increased thickness */
+        border-radius: 15px; /* More rounded corners */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
+        padding: 10px; /* Padding inside the border */
+        background-color: #003c43; /* Dark background to match theme */
+      }
+      /* Back button styles */
+      .back-button {
+        display: inline-block;
+        margin-bottom: 2rem;
+        padding: 0.5rem 1rem;
+        background: #0c4e1d;
+        color: #f5f5f5;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 2rem;
+        transition: background 0.3s ease;
+      }
+
+      .back-button:hover {
+        background: #1f6249;
+        color: #f5f5f5;
+        text-decoration: none;
+      }
+/* Pricing Section Styles */
+.pricing-section {
+  background-color: #6d9c97;
+  padding: 4rem 1rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.pricing-section h2 {
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+
+.pricing-tables {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.pricing-card {
+  background-color: #003c43;
+  color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 300px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin: 0 auto;
+}
+
+.pricing-card h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  color: #ff4971;
+}
+
+.pricing-card .price {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+}
+
+.pricing-card .price span {
+  font-size: 1rem;
+}
+
+.pricing-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.pricing-card ul li {
+  font-size: 1rem;
+  margin: 0.5rem 0;
+}
+
+.pricing-card .cta-button {
+  background-color: transparent;
+  border: solid white 1px;
+  padding: 0.7rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.pricing-card .cta-button:hover {
+  background-color: #9c2b44;
+  color: #fff;
+}
+
+.featured {
+  background-color: #972b43;
+  color: #fff;
+}
+#pro-heading {
+  color: rgb(255, 255, 255);
+}
+.threeD {
+        font-size: 48px;
+        font-weight: bold;
+        color: #30473a;
+        text-shadow: 3px 3px 5px #beb9b9, 
+                     -3px -3px 5px #bbb;
+    }
+.pricing-title {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #305d5c; /* Background color */
+    color: white;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); /* 3D shadow effect */
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    transform: perspective(500px) rotateX(5deg); /* 3D tilt effect */
+}
+
+
+    </style>
+  </head>
+  <body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark">
+          <div class="container">
+            <a class="navbar-brand logo" href="index.html"
+            >Learn<span class="pink">Ease</span></a
+            >
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarNav"
+              aria-controls="navbarNav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+              <ul class="navbar-nav mx-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Pricing.html">Pricing</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="About.html">About Us</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Blog.html">Blog</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="Contacts.html">Contacts</a>
+                </li>
+              </ul>
+              <a href="#contact" class="btn cta-button">Sign Up</a>
+            </div>
+          </div>
+        </nav>
+      </header>
+    <main>
+
+      <div class="hero">
+        <h1 class="threeD">"LearnEase: Advanced Learning Management System"</h1>
+        <p><i>LMS for Academic Purposes</i></p>
+        <section id="pricing" class="pricing-section">
+          <h2 class="pricing-title"><b>Our Pricing Plans</b></h2>
+          <div class="pricing-tables">
+              <div class="pricing-card">
+                <h3>Basic</h3>
+                <p class="price">$9.99<span>/month</span></p>
+                <ul>
+                  <li>Access to basic courses</li>
+                  <li>1 GB storage</li>
+                  <li>Email support</li>
+                </ul>
+                <a href="Chatbot.html" class="cta-button">Get Started</a>
+              </div>
+              <div class="pricing-card featured">
+                <h3 id="pro-heading">Pro</h3>
+                <p class="price">$29.99<span>/month</span></p>
+                <ul>
+                  <li>Access to all courses</li>
+                  <li>10 GB storage</li>
+                  <li>Priority support</li>
+                </ul>
+                <a href="Chatbot.html" class="cta-button">Get Started</a>
+              </div>
+              <div class="pricing-card">
+                <h3>Enterprise</h3>
+                <p class="price">$99.99<span>/month</span></p>
+                <ul>
+                  <li>Unlimited access to all features</li>
+                  <li>50 GB storage</li>
+                  <li>Dedicated support</li>
+                </ul>
+                <a href="Chatbot.html" class="cta-button">Get Started</a>
+              </div>
+            </div>
+          </section>
+          
+     
+        
+    </main>
+
+    <br />
+    <br />
+    <br />
+    <footer>
+      <div class="container text-center py-4">
+        <p>&copy; 2024 LearnEase. All Rights Reserved.</p>
+        <div class="social-media mt-2">
+          <a href="#" class="text-white mx-2"
+            ><i class="fab fa-facebook-f"></i
+          ></a>
+          <a href="#" class="text-white mx-2"><i class="fab fa-twitter"></i></a>
+          <a href="#" class="text-white mx-2"
+            ><i class="fab fa-linkedin-in"></i
+          ></a>
+          <a href="#" class="text-white mx-2"
+            ><i class="fab fa-instagram"></i
+          ></a>
+        </div>
+      </div>
+    </footer>
+    <!-- Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+
+  <script type="module">
+    import Chatbox from 'https://cdn.jsdelivr.net/npm/@chaindesk/embeds@latest/dist/chatbox/index.js';
+  
+    const widget = await Chatbox.initBubble({
+      agentId: 'cm09nde7c0433vce6a860ytbv',
+      
+      // optional 
+      // If provided will create a contact for the user and link it to the conversation
+      contact: {
+        firstName: 'John',
+        lastName: 'Doe',
+        email: 'customer@email.com',
+        phoneNumber: '+33612345644',
+        userId: '42424242',
+      },
+      // optional
+      // Override initial messages
+      initialMessages: [
+        'Hello Georges how are you doing today?',
+        'How can I help you ?',
+      ],
+      // optional
+      // Provided context will be appended to the Agent system prompt
+      context: "The user you are talking to is John. Start by Greeting him by his name.",
+    });
+  
+    // open the chat bubble
+    widget.open();
+  
+    // close the chat bubble
+    widget.close()
+  
+    // or 
+    widget.toggle()
+  </script>
+</html>
